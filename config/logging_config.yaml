@@ -1,0 +1,21 @@
+version: 1
+formatters:
+  detailed:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+handlers:
+  file_handler:
+    class: logging.FileHandler
+    level: INFO
+    formatter: detailed
+    filename: logs/pipeline.log
+
+loggers:
+  pipeline_logger:
+    level: INFO
+    handlers: [file_handler]
+    propagate: no
+
+root:
+  level: INFO
+  handlers: [file_handler]

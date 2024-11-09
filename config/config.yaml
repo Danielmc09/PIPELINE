@@ -1,0 +1,11 @@
+# config.yaml
+
+data_paths:
+  prints: "./data/raw/prints.json"
+  taps: "./data/raw/taps.json"
+  pays: "./data/raw/pays.csv"
+
+output_paths:
+  processed: "./data/processed"
+  final: "./data/final/final_dataset"
+  export_format: "parquet"

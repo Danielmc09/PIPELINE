@@ -1,0 +1,27 @@
+# Archivos de configuración de IDEs y del sistema
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+
+# Dependencias y entornos virtuales
+venv/
+.env
+
+# Archivos de documentación
+docs/
+*.md
+
+# Archivos específicos de Docker
+docker-compose.yml
+.dockerignore
+Dockerfile*
+
+# Archivos de prueba y cobertura
+tests/
+htmlcov/
+.coverage

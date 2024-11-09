@@ -1,0 +1,23 @@
+# docker-compose.yml
+
+services:
+  data_pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: sh -c "python src/pipeline.py"
+    environment:
+      - PYTHONPATH=/app
+
+  #tests:
+  #  build:
+  #    context: .
+  #    dockerfile: Dockerfile
+  #  volumes:
+  #    - .:/app
+  #  command: pytest --cov=src --cov-report=term-missing --cov-report=html tests/
+  #  environment:
+  #    - PYTHONPATH=/app
+  #  entrypoint: ["/bin/sh", "-c", "pytest tests/ && exit 0 || exit 1"]
